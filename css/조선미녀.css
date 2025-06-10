@@ -1,0 +1,1995 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'Shilla_CultureB-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+.event-banner {
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.event-container {
+    position: relative;
+    width: 100%;
+    height: 35px;
+}
+
+.event-slide {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeSlide 6s infinite;
+}
+
+/* 첫 번째 슬라이드 타이밍 */
+.event-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* 두 번째 슬라이드 타이밍 */
+.event-slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.header {
+    width: 100%;
+    height: 79.5px;
+    background: #fff;
+    margin-top: 35px;
+    border-bottom: 1px solid #333;
+}
+
+.header-container {
+    width: 100%;
+    line-height: 37.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 60px;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    gap: 20px;
+    /* 메뉴끼리 간격 */
+}
+
+.header-logo {
+    width: 224.38px;
+    height: 22.99px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.section-01 {
+    margin-bottom: 120px;
+    width: 100%;
+
+}
+
+.section-01 .swiper-slide img {
+    width: 100%;
+}
+
+.swiper {
+    overflow: hidden;
+}
+
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section-02 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1021px;
+    /* 메인 이미지 높이 */
+    width: 100%;
+    position: relative;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.section-02 .inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 80px;
+}
+
+.section-02 .text-area {
+    font-family: 'Shilla_CultureB-Bold' !important;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.section-02 .main-image {
+    position: absolute;
+    bottom: 0;
+    left: 178px;
+    width: 685px;
+    height: auto;
+}
+
+.section-02 .cream-image {
+    position: absolute;
+    bottom: -17px;
+    /* 위치 조정 */
+    left: 863px;
+    /* 위치 조정 */
+    width: 250px;
+    /* 썬크림 이미지 크기 */
+}
+
+.section-02 .drop {
+    position: absolute;
+    animation: dropAnimation 2s infinite;
+    /* 애니메이션 추가, 2초마다 반복 */
+}
+
+.section-02 .drop1 {
+    width: 250px;
+    height: 280px;
+    top: 10px;
+    right: 600px;
+    animation-delay: 0s;
+}
+
+.section-02 .drop2 {
+    width: 130px;
+    height: 160px;
+    top: 100px;
+    right: 400px;
+    animation-delay: 0.5s;
+}
+
+.section-02 .drop3 {
+    width: 350px;
+    height: 380px;
+    top: 300px;
+    right: 30px;
+    animation-delay: 1s;
+}
+
+
+
+
+
+
+/* 물방울 애니메이션 정의 */
+@keyframes dropAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+.section-03 .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px 10px;
+}
+
+.section-03 .mySwiper2 {
+    padding: 30px 60px;
+}
+
+.section-03 .mySwiper2 img {
+    width: 364px;
+    object-fit: cover;
+}
+
+.section-03 .mySwiper2 h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-03 .mySwiper2 p {
+    font-size: 15px;
+}
+
+.section-03 .swiper-slide .hover-img {
+    display: none;
+}
+
+/* 호버 시 이미지 변경 */
+.section-03 .swiper-slide:hover .default-img {
+    display: none;
+}
+
+.section-03 .swiper-slide:hover .hover-img {
+    display: block;
+}
+
+.section-04 {
+    padding: 300px 60px;
+}
+
+.section-04 p {
+    font-size: 60px;
+    position: relative;
+    z-index: 1;
+    /* 텍스트는 영상+필터 위에 올라오게 */
+}
+
+
+
+.section-04 {
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    /* 글자색 */
+}
+
+.section-04::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.6);
+    /* 하얀색 투명 레이어 (60% 투명) */
+}
+
+.section-04 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    /* 영상은 가장 뒤에 */
+    object-fit: cover;
+}
+
+.section-05 {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-05 img {
+    width: 50%;
+    height: 100%;
+
+
+}
+
+.section-06 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1021px;
+    margin-top: 120px;
+}
+
+.section-06 .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 80px;
+    overflow: hidden;
+}
+
+.section-06 .text-area {
+    font-family: 'Shilla_CultureB-Bold' !important;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.section-06 .sun-image {
+    position: absolute;
+    bottom: 0;
+    right: 685px;
+    width: 504px;
+    height: 737px;
+}
+
+.section-06 .sunmain-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 685px;
+    height: auto;
+
+}
+
+.section-06 .rice1,
+.rice2,
+.rice3,
+.rice4 {
+    position: absolute;
+    width: 30px;
+    /* 쌀알 크기 조정 */
+    animation: riceAnimation 3s ease-in-out infinite;
+}
+
+
+.rice1 {
+    top: 50%;
+    left: 20%;
+}
+
+.rice2 {
+    top: 40%;
+    left: 30%;
+}
+
+.rice3 {
+    top: 80%;
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.rice4 {
+    top: 30%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+/* 쌀알 애니메이션 */
+@keyframes riceAnimation {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(-50px, -50px) rotate(-45deg);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(50px, -30px) rotate(45deg);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform: translate(-30px, 30px) rotate(-20deg);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate(20px, 50px) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+
+.section-07 {
+    margin-bottom: 120px;
+}
+
+.section-07 .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px 10px;
+}
+
+.section-07 .mySwiper3 {
+    padding: 10px 60px;
+}
+
+.section-07 .mySwiper3 img {
+    width: 364px;
+    object-fit: cover;
+}
+
+.section-07 .mySwiper3 h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-07 .mySwiper3 p {
+    font-size: 15px;
+}
+
+.section-07 .swiper-slide .hover-img {
+    display: none;
+}
+
+/* 호버 시 이미지 변경 */
+.section-07 .swiper-slide:hover .default-img {
+    display: none;
+}
+
+.section-07 .swiper-slide:hover .hover-img {
+    display: block;
+}
+
+
+.section-09 {
+    margin-bottom: 120px;
+}
+
+.section-09 .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px 10px;
+}
+
+
+
+.section-09 .mySwiper4 {
+    padding: 10px 60px;
+}
+
+.section-09 .mySwiper4 img {
+    width: 364px;
+    object-fit: cover;
+}
+
+.section-09 .mySwiper4 h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-09 .mySwiper4 p {
+    font-size: 15px;
+}
+
+.section-09 .swiper-slide .hover-img {
+    display: none;
+}
+
+/* 호버 시 이미지 변경 */
+.section-09 .swiper-slide:hover .default-img {
+    display: none;
+}
+
+.section-09 .swiper-slide:hover .hover-img {
+    display: block;
+}
+
+
+
+
+footer .image img {
+    display: block;
+    padding: 0 60px;
+}
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+.footer-section {
+    width: 24%;
+    /* 각 섹션의 너비를 설정 */
+    flex-shrink: 0;
+    /* 섹션들이 줄어들지 않도록 설정 */
+    padding: 60px 60px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+
+.footer-info {
+    padding: 0 60px;
+    font-size: 13px;
+    color: #999;
+}
+
+@media screen and (max-width: 1024px) {
+    .category-box {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 16px;
+    }
+
+    .tab-menu {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+    }
+
+    .tab-menu li {
+        font-size: 14px;
+        padding: 8px 14px;
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        flex-shrink: 0;
+    }
+
+    /* 아이템 영역 */
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-box img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .item-box .item-text {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .item-box .item-text h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .item-box .item-text p {
+        font-size: 14px;
+        color: #777;
+    }
+
+
+
+    img {
+        width: 100%;
+        /* 또는 직접 줄여 */
+        height: auto;
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        /* 여백 없애기 위해 block 주기도 함 */
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    .header-left,
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* 기존 텍스트 메뉴 숨기기 */
+    .header-left li,
+    .header-right li {
+        display: none;
+    }
+
+    /* 아이콘 삽입용 가상 요소 만들기 */
+    .header-left::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/zondicons_menu.png') no-repeat center / contain;
+    }
+
+    .header-right::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/Vector.png') no-repeat center / contain;
+    }
+
+    /* 로고 중앙 정렬 */
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-container {
+        margin: 25px 0;
+        padding: 0 30px;
+    }
+
+    .event-banner {
+        width: 1024px;
+        height: 30px;
+        /* 높이 줄이기 */
+        font-size: 12px;
+        /* 폰트도 살짝 줄이기 */
+    }
+
+    .event-container {
+        width: 1024px;
+        height: 30px;
+        /* container 높이도 맞추기 */
+    }
+
+    .event-slide {
+        width: 1024px;
+        height: 30px;
+        /* 슬라이드도 높이 맞추기 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 텍스트 중앙 정렬 */
+    }
+
+    .section-01 {
+        margin-bottom: 60px;
+        width: 100%;
+    }
+
+    .section-02 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        /* 기존 padding 제거 */
+    }
+
+    /* .section-02 .inner */
+    .section-02 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-02 .text-area {
+        font-size: 50px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-02 .main-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 70%;
+        height: auto;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-02 .cream-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .section-02 .drop {
+        display: none;
+    }
+
+    .section-03 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-03 .mySwiper2 {
+        padding: 0 20px;
+    }
+
+    .section-03 .mySwiper2 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-03 .mySwiper2 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-03 .mySwiper2 p {
+        font-size: 15px;
+    }
+
+    .section-04 {
+        padding: 150px;
+    }
+
+    .section-04 p {
+        font-size: 30px;
+    }
+
+    .section-04 video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* 영상은 가장 뒤에 */
+        object-fit: cover;
+    }
+
+
+    .section-04::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgba(255, 255, 255, 0.6);
+        /* 하얀색 투명 레이어 (60% 투명) */
+    }
+
+
+    .section-05 {
+        flex-direction: column;
+        /* 이미지가 세로로 배치되도록 설정 */
+        height: auto;
+        /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조정 */
+    }
+
+    .section-05 img {
+        width: 100%;
+        /* 이미지 너비를 100%로 설정 */
+        height: auto;
+        /* 이미지 비율을 유지하며 자동으로 높이를 조정 */
+    }
+
+
+    .section-06 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    /* .section-02 .inner */
+    .section-06 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-06 .text-area {
+        font-size: 40px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-06 .sunmain-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 70%;
+        height: auto;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-06 .sun-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .rice1,
+    .rice2,
+    .rice3,
+    .rice4 {
+        display: none;
+    }
+
+    .section-07 {
+        margin-bottom: 60px;
+    }
+
+
+    .section-07 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-07 .mySwiper3 {
+        padding: 0 20px;
+    }
+
+    .section-07 .mySwiper3 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-07 .mySwiper3 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-07 .mySwiper3 p {
+        font-size: 15px;
+    }
+
+    .section-08 video {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .section-09 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+    .section-09 .mySwiper4 {
+        padding: 0 20px;
+    }
+
+
+    .section-09 .mySwiper4 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-09 .mySwiper4 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-09 .mySwiper4 p {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* 왼쪽 정렬 */
+    }
+
+    .footer-section {
+        padding: 0 16px;
+    }
+
+    footer .image img {
+        width: 50%;
+        height: 50%;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        display: none;
+    }
+
+
+    .footer-info {
+        padding: 0 20px;
+        font-size: 13px;
+        color: #999;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    /* 카테고리 탭 메뉴 */
+    .category-box {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 16px;
+    }
+
+    .tab-menu {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+    }
+
+    .tab-menu li {
+        font-size: 14px;
+        padding: 8px 14px;
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        flex-shrink: 0;
+    }
+
+    /* 아이템 영역 */
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-box img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .item-box .item-text {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .item-box .item-text h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .item-box .item-text p {
+        font-size: 14px;
+        color: #777;
+    }
+
+
+
+    img {
+        width: 100%;
+        /* 또는 직접 줄여 */
+        height: auto;
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        /* 여백 없애기 위해 block 주기도 함 */
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    .header-left,
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* 기존 텍스트 메뉴 숨기기 */
+    .header-left li,
+    .header-right li {
+        display: none;
+    }
+
+    /* 아이콘 삽입용 가상 요소 만들기 */
+    .header-left::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/zondicons_menu.png') no-repeat center / contain;
+    }
+
+    .header-right::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/Vector.png') no-repeat center / contain;
+    }
+
+    /* 로고 중앙 정렬 */
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-container {
+        margin: 25px 0;
+        padding: 0 30px;
+    }
+
+    .event-banner {
+        width: 640px;
+        height: 25px;
+        /* 높이 줄이기 */
+        font-size: 10px;
+        /* 폰트도 살짝 줄이기 */
+    }
+
+    .event-container {
+        width: 640px;
+        height: 25px;
+        /* container 높이도 맞추기 */
+    }
+
+    .event-slide {
+        width: 640px;
+        height: 25px;
+        /* 슬라이드도 높이 맞추기 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 텍스트 중앙 정렬 */
+    }
+
+    .section-01 {
+        margin-bottom: 60px;
+        width: 100%;
+    }
+
+    .section-02 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        /* 기존 padding 제거 */
+    }
+
+    /* .section-02 .inner */
+    .section-02 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-02 .text-area {
+        font-size: 40px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-02 .main-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 640px;
+        height: 959px;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-02 .cream-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .section-02 .drop {
+        display: none;
+    }
+
+    .section-03 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-03 .mySwiper2 {
+        padding: 0 20px;
+    }
+
+    .section-03 .mySwiper2 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-03 .mySwiper2 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-03 .mySwiper2 p {
+        font-size: 15px;
+    }
+
+    .section-04 {
+        padding: 150px;
+    }
+
+    .section-04 p {
+        font-size: 30px;
+    }
+
+    .section-04 video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* 영상은 가장 뒤에 */
+        object-fit: cover;
+    }
+
+
+    .section-04::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgba(255, 255, 255, 0.6);
+        /* 하얀색 투명 레이어 (60% 투명) */
+    }
+
+
+    .section-05 {
+        flex-direction: column;
+        /* 이미지가 세로로 배치되도록 설정 */
+        height: auto;
+        /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조정 */
+    }
+
+    .section-05 img {
+        width: 100%;
+        /* 이미지 너비를 100%로 설정 */
+        height: auto;
+        /* 이미지 비율을 유지하며 자동으로 높이를 조정 */
+    }
+
+
+    .section-06 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    /* .section-02 .inner */
+    .section-06 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-06 .text-area {
+        font-size: 40px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-06 .sunmain-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 640px;
+        height: 959px;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-06 .sun-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .rice1,
+    .rice2,
+    .rice3,
+    .rice4 {
+        display: none;
+    }
+
+    .section-07 {
+        margin-bottom: 60px;
+    }
+
+
+    .section-07 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-07 .mySwiper3 {
+        padding: 0 20px;
+    }
+
+    .section-07 .mySwiper3 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-07 .mySwiper3 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-07 .mySwiper3 p {
+        font-size: 15px;
+    }
+
+    .section-08 video {
+        height: 520px;
+        object-fit: cover;
+    }
+
+    .section-09 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+    .section-09 .mySwiper4 {
+        padding: 0 20px;
+    }
+
+
+    .section-09 .mySwiper4 img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .section-09 .mySwiper4 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-09 .mySwiper4 p {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* 왼쪽 정렬 */
+    }
+
+    .footer-section {
+        padding: 0 16px;
+    }
+
+    footer .image img {
+        width: 50%;
+        height: 50%;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        display: none;
+    }
+
+
+    .footer-info {
+        padding: 0 20px;
+        font-size: 13px;
+        color: #999;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* 카테고리 탭 메뉴 */
+    .category-box {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 16px;
+    }
+
+    .tab-menu {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+    }
+
+    .tab-menu li {
+        font-size: 14px;
+        padding: 8px 14px;
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        flex-shrink: 0;
+    }
+
+    /* 아이템 영역 */
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-box img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .item-box .item-text {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .item-box .item-text h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .item-box .item-text p {
+        font-size: 14px;
+        color: #777;
+    }
+
+
+
+    img {
+        width: 100%;
+        /* 또는 직접 줄여 */
+        height: auto;
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        /* 여백 없애기 위해 block 주기도 함 */
+    }
+
+    .header {
+        height: 30px;
+    }
+
+    .header-left,
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* 기존 텍스트 메뉴 숨기기 */
+    .header-left li,
+    .header-right li {
+        display: none;
+    }
+
+    /* 아이콘 삽입용 가상 요소 만들기 */
+    .header-left::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/zondicons_menu.png') no-repeat center / contain;
+    }
+
+    .header-right::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/Vector.png') no-repeat center / contain;
+    }
+
+    /* 로고 중앙 정렬 */
+    .header-logo {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-container {
+        margin: 25px 0;
+        padding: 0 30px;
+    }
+
+    .event-banner {
+        width: 480px;
+        height: 20px;
+        /* 높이 줄이기 */
+        font-size: 10px;
+        /* 폰트도 살짝 줄이기 */
+    }
+
+    .event-container {
+        width: 480px;
+        height: 20px;
+        /* container 높이도 맞추기 */
+    }
+
+    .event-slide {
+        width: 480px;
+        height: 20px;
+        /* 슬라이드도 높이 맞추기 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 텍스트 중앙 정렬 */
+    }
+
+    .section-01 {
+        margin-bottom: 60px;
+        width: 100%;
+    }
+
+    .section-02 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        /* 기존 padding 제거 */
+    }
+
+    /* .section-02 .inner */
+    .section-02 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-02 .text-area {
+        font-size: 30px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-02 .main-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 480px;
+        height: auto;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-02 .cream-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .section-02 .drop {
+        display: none;
+    }
+
+    .section-03 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-03 .mySwiper2 {
+        padding: 0 20px;
+    }
+
+    .section-03 .mySwiper2 img {
+        width: 220px;
+        object-fit: cover;
+    }
+
+    .section-03 .mySwiper2 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-03 .mySwiper2 p {
+        font-size: 15px;
+    }
+
+    .section-04 {
+        padding: 100px;
+    }
+
+    .section-04 p {
+        font-size: 20px;
+    }
+
+    .section-04 video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* 영상은 가장 뒤에 */
+        object-fit: cover;
+    }
+
+
+    .section-04::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: rgba(255, 255, 255, 0.6);
+        /* 하얀색 투명 레이어 (60% 투명) */
+    }
+
+
+    .section-05 {
+        flex-direction: column;
+        /* 이미지가 세로로 배치되도록 설정 */
+        height: auto;
+        /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조정 */
+    }
+
+    .section-05 img {
+        width: 100%;
+        /* 이미지 너비를 100%로 설정 */
+        height: auto;
+        /* 이미지 비율을 유지하며 자동으로 높이를 조정 */
+    }
+
+
+    .section-06 {
+        height: auto;
+        /* 높이 유동적으로 변경 */
+        padding: 40px 20px;
+        /* 여백 조정 */
+        flex-direction: column;
+        /* 방향을 세로로 */
+        align-items: center;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    /* .section-02 .inner */
+    .section-06 .inner {
+        flex-direction: column;
+        /* 세로로 쌓이게 */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* .section-02 .text-area */
+    .section-06 .text-area {
+        font-size: 30px;
+        /* 폰트 사이즈 줄이기 */
+        margin: 0 0 60px 0;
+        /* 아래 여백 주기 */
+        text-align: center;
+        /* 텍스트 중앙 정렬 */
+        order: -2;
+    }
+
+
+    /* .section-02 .main-image */
+    .section-06 .sunmain-image {
+        position: static;
+        /* 절대 위치 해제 */
+        width: 640px;
+        height: 959px;
+        /* 이미지 크기 조정 */
+        order: 1;
+        /* main 이미지 순서 변경 */
+    }
+
+    /* .section-02 .cream-image */
+    .section-06 .sun-image {
+        display: none;
+        /* 썬크림 이미지 숨기기 */
+    }
+
+    .rice1,
+    .rice2,
+    .rice3,
+    .rice4 {
+        display: none;
+    }
+
+    .section-07 {
+        margin-bottom: 60px;
+    }
+
+
+    .section-07 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+
+    .section-07 .mySwiper3 {
+        padding: 0 20px;
+    }
+
+    .section-07 .mySwiper3 img {
+        width: 220px;
+        object-fit: cover;
+    }
+
+    .section-07 .mySwiper3 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-07 .mySwiper3 p {
+        font-size: 15px;
+    }
+
+    .section-08 video {
+        height: 520px;
+        object-fit: cover;
+    }
+
+    .section-09 .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 10px;
+    }
+
+    .section-09 .mySwiper4 {
+        padding: 0 20px;
+    }
+
+
+    .section-09 .mySwiper4 img {
+        width: 220px;
+        object-fit: cover;
+    }
+
+    .section-09 .mySwiper4 h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .section-09 .mySwiper4 p {
+        font-size: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* 왼쪽 정렬 */
+    }
+
+    .footer-section {
+        padding: 0 16px;
+    }
+
+    footer .image img {
+        width: 50%;
+        height: 50%;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        display: none;
+    }
+
+
+    .footer-info {
+        padding: 0 20px;
+        font-size: 13px;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 393px) {
+
+        /* 기존 스타일 */
+        .footer-section h3 {
+            font-size: 12px;
+            /* 헤딩 폰트 크기 줄임 */
+        }
+
+        .footer-info {
+            font-size: 11px;
+            /* 부가 정보 폰트 크기 줄임 */
+        }
+
+        .footer-section ul li {
+            font-size: 11px;
+            /* 리스트 항목 크기도 줄임 */
+        }
+
+        /* 이벤트 배너: 화면 정중앙에 정렬 */
+        .event-banner {
+            display: flex;
+            justify-content: center;
+            /* 가로 가운데 정렬 */
+            align-items: center;
+            /* 세로 가운데 정렬 */
+            text-align: center;
+            padding: 5px 8px;
+            /* 패딩 조정 */
+            font-size: 12px;
+            /* 텍스트 크기 줄이기 */
+            background-color: #000;
+            /* 검은 배경 유지 */
+            color: #fff;
+            /* 텍스트 색상 */
+            width: 100%;
+            /* 화면 너비 전체 */
+            box-sizing: border-box;
+            /* 패딩 포함 크기 */
+        }
+
+        .event-container {
+            max-width: 90%;
+            /* 배너의 최대 너비 제한 */
+            margin: 0 auto;
+            /* 중앙 정렬 */
+        }
+
+        /* section-02 main-image: 비율 유지하며 크기 축소 */
+        .section-02 .main-image {
+            width: 393px;
+            /* 부모 요소 기준 너비 */
+            height: auto;
+            /* 높이는 비율에 따라 자동 조정 */
+            margin: 10px auto;
+            /* 중앙 정렬 */
+            display: block;
+        }
+
+        .section-06 .sunmain-image {
+            width: 393px;
+            /* 부모 요소 기준 너비 */
+            height: auto;
+            /* 높이는 비율에 따라 자동 조정 */
+            margin: 10px auto;
+            /* 중앙 정렬 */
+            display: block;
+        }
+
+
+
+
+        .event-slide {
+            width: 100%;
+            /* 중앙 정렬 */
+            display: block;
+        }
+
+
+    }
+}
+
+;
+
+/* end */

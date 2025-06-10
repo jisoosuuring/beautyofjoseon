@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조선미녀</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/조선미녀.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<script>
+    window.onload = () => {
+        var swiper1 = new Swiper(".mySwiper", {
+            spaceBetween: 50,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                },
+            }
+        });
+
+        var swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                },
+            }
+        });
+
+        var swiper4 = new Swiper(".mySwiper4", {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                320: {
+                    slidesPerView: 1, 
+                    spaceBetween: 5,
+                },
+            }
+            });
+        
+    };
+</script>
+
+
+<script>
+    function changeText() {
+        if (window.innerWidth <= 1024) {
+            document.querySelector('.text-area').innerHTML = '미인비책';
+        } else {
+            document.querySelector('.text-area').innerHTML = '미<br>인<br>비<br>책';
+        }
+    };
+
+    window.addEventListener('load', changeText);
+    window.addEventListener('resize', changeText);
+</script>
+
+<script>
+    function changeText() {
+        const textArea = document.querySelector('.section-06 .text-area');
+        if (!textArea) return; // text-area가 없을 경우 대비
+
+        if (window.innerWidth <= 1024) {
+            textArea.innerHTML = '햇빛을 품은 미용비방';
+        } else {
+            textArea.innerHTML = '햇<br>빛<br>을<br>품<br />은<br />미<br>용<br>비<br>방';
+        }
+    };
+
+    window.addEventListener('load', changeText);
+    window.addEventListener('resize', changeText);
+</script>
+
+<script>
+    // 화면 크기 조정 시 이미지 교체
+    function changeImage() {
+        var img = document.getElementById('image-to-change');  // 'section-10' -> 'image-to-change'로 수정
+
+        if (window.innerWidth <= 640) {
+            img.src = 'img/image 14.png';  // 640px 이하일 때 새로운 이미지로 변경
+        } else {
+            img.src = 'img/image 9.png';  // 640px 이상일 때 원래 이미지로 변경
+        }
+    }
+
+    // 페이지 로드 시와 화면 크기 조정 시 이미지를 교체
+    window.addEventListener('load', changeImage);
+    window.addEventListener('resize', changeImage);
+
+</script>
+
+
+
+
+
+<body>
+
+    <div class="event-banner">
+        <div class="event-container">
+            <p class="event-slide">모든 구매고객 샘플 3종 랜덤 증정 🌼</p>
+            <p class="event-slide">조선미녀 카톡 친구추가 시 5,000원 할인쿠폰 증정</p>
+        </div>
+    </div> <!-- event banner end -->
+
+    <header class="header">
+        <nav class="header-container">
+
+            <!-- 왼쪽 메뉴 -->
+            <ul class="header-left">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">Event</a></li>
+            </ul>
+
+            <!-- 가운데 로고 -->
+            <div class="header-logo">
+                <a href="#"><img src="img/메인로고.png" alt="로고"></a>
+            </div>
+
+            <!-- 오른쪽 메뉴 -->
+            <ul class="header-right">
+                <li><a href="#">Global</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Bag:0</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="section-01">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/image 2.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/메인2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/메인3.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- section-01 end -->
+
+    <section class="section-02">
+        <div class="inner">
+            <div class="text-area">
+                <h1>미<br>인<br>비<br>책</h1>
+            </div>
+            <img src="img/베스트셀러 이미지.png" alt="메인 이미지" class="main-image">
+            <img src="img/썬크림 이미지.png" alt="썬크림 이미지" class="cream-image">
+
+            <img src="img/물방울.png" alt="물방울1" class="drop drop1">
+            <img src="img/물방울.png" alt="물방울2" class="drop drop2">
+            <img src="img/물방울.png" alt="물방울3" class="drop drop3">
+        </div>
+
+    </section><!-- section-02 end -->
+
+
+    <section class="section-03">
+
+        <div class="inner">
+            <p>Best Seller</p>
+            <span>More View +</span>
+        </div><!-- inner end -->
+
+
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/image 4.png" alt="1" class="default-img">
+                    <img class="hover-img" src="img/1.jpg" alt="1-hover">
+                    <h2>병풀비타세럼</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image.png" alt="2" class="default-img">
+                    <img class="hover-img" src="img/2.jpg" alt="1-hover">
+                    <h2>인삼아이크림 : 인삼 + 레티날</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-1.png" alt="3" class="default-img">
+                    <img class="hover-img" src="img/3.jpg" alt="1-hover">
+                    <h2>맑은쌀선크림 : 고아미+프로바이오틱스 (SPF 50+ PA++++)</h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-2.png" alt="4" class="default-img">
+                    <img class="hover-img" src="img/4.jpg" alt="1-hover">
+                    <h2>[NEW] 맑은쌀선크림 아쿠아프레쉬</h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-3.png" alt=". 5" class="default-img">
+                    <img class="hover-img" src="img/5.jpg" alt="1-hover">
+                    <h2>광채프로폴리스세럼 : 프로폴리스 + 나이아신아마이드</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-4.png" alt=". 6" class="default-img">
+                    <img class="hover-img" src="img/6.jpg" alt="1-hover">
+                    <h2>인삼스네일세럼 : 인삼 + 스네일뮤신</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-5.png" alt=". 7" class="default-img">
+                    <img class="hover-img" src="img/7.jpg" alt="1-hover">
+                    <h2>쌀겨수맑은세럼 : 쌀겨수 + 알파-알부틴</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-6.png" alt=". 8" class="default-img">
+                    <img class="hover-img" src="img/8.jpg" alt="1-hover">
+                    <h2>조선미녀크림</h2>
+                    <p>₩24,000</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section><!-- section-03 end -->
+
+
+
+    <section class="section-04">
+        <video src="img/파도.mp4" autoplay muted loop playsinline></video>
+        <p>
+            We create inspired skincare<br />
+            that’s unique to your routine, gentle on skin<br />
+            and always effective.
+        </p>
+    </section>
+
+    <section class="section-05">
+        <img src="img/image 11-1.png" alt="1">
+        <img src="img/image 6.png" alt="2">
+    </section><!-- section-05 -->
+
+
+    <section class="section-06">
+        <div class="inner">
+            <div class="text-area">
+                햇<br />빛<br />을<br />품<br />은<br />미<br />용<br />비<br />방</br />
+            </div>
+            <img src="img/크림누끼1.png" alt="썬크림이미지" class="sun-image">
+            <img src="img/Layer 6.png" alt="썬크림 이미지" class="sunmain-image">
+
+            <img src="img/Layer 1.png" alt="쌀1" class="rice1">
+            <img src="img/Layer 2.png" alt="쌀2" class="rice2">
+            <img src="img/Layer 2.png" alt="쌀3" class="rice3">
+            <img src="img/Layer 1.png" alt="쌀4" class="rice4">
+        </div> <!-- inner end -->
+
+    </section><!-- section-06 end -->
+
+
+    <section class="section-07">
+
+        <div class="inner">
+            <p>Suncare</p>
+            <span>More View +</span>
+        </div><!-- inner end -->
+
+
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/image-7.png" alt="1" class="default-img">
+                    <img class="hover-img" src="img/2-1.jpg" alt="1-hover">
+                    <h2>산들쑥선스틱 (SPF 50+ PA++++)</h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-8.png" alt="2" class="default-img">
+                    <img class="hover-img" src="img/2-2.jpg" alt="1-hover">
+                    <h2>인삼선세럼 (SPF 50+ PA++++)</h2>
+                    <p>₩21,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-9.png" alt="3" class="default-img">
+                    <img class="hover-img" src="img/2-3.jpg" alt="1-hover">
+                    <h2>맑은쌀선크림 더블기획세트 (SPF 50+ PA++++)</h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-10.png" alt="4" class="default-img">
+                    <img class="hover-img" src="img/2-4.jpg" alt="1-hover">
+                    <h2>맑은쌀선크림 : 고아미+프로바이오틱스 (SPF 50+ PA++++)</h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-11.png" alt=". 5" class="default-img">
+                    <img class="hover-img" src="img/2-5.jpg" alt="1-hover">
+                    <p>₩17,000</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </section><!-- section-07 end -->
+
+    <section class="section-08">
+        <video src="img/26486569_20250407-00f628fdec28d5ec_tablet2_charlla-6a1f0c02-tablet2-high-20250407135902.mp4"
+            autoplay muted loop></video>
+    </section><!-- section-08 end -->
+
+    <section class="section-09">
+
+        <div class="inner">
+            <p>MD’s Pick</p>
+            <span>More View +</span>
+        </div><!-- inner end -->
+
+
+        <div class="swiper mySwiper4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/image-12.png" alt="1" class="default-img">
+                    <img class="hover-img" src="img/3-1.jpg" alt="1-hover">
+                    <h2>붉은 팥 수분워터젤 </h2>
+                    <p>₩18,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-13.png " alt="2" class="default-img">
+                    <img class="hover-img" src="img/3-2.jpg" alt="1-hover">
+                    <h2>맑은쌀 약산성 클렌징바</h2>
+                    <p>₩10,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-9.png" alt="3" class="default-img">
+                    <img class="hover-img" src="img/3-3.jpg" alt="1-hover">
+                    <h2>맑은쌀선크림 더블기획세트 (SPF 50+ PA++++)</h2>
+                    <p>₩21,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-15.png" alt="4" class="default-img">
+                    <img class="hover-img" src="img/3-4.jpg" alt="1-hover">
+                    <h2>산들녹차세럼 : 녹차 + 판테놀</h2>
+                    <p>₩17,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image-16.png" alt="5" class="default-img">
+                    <img class="hover-img" src="img/3-5.jpg" alt="1-hover">
+                    <h2>미감클렌징밤</h2>
+                    <p>₩19,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image 4-1.png" alt="6" class="default-img">
+                    <img class="hover-img" src="img/3-6.jpg" alt="1-hover">
+                    <h2>병풀진정마스크 (10매)</h2>
+                    <p>₩25,000</p>
+                </div>
+
+                <div class="swiper-slide"><img src="img/image 4-2.png" alt="7" class="default-img">
+                    <img class="hover-img" src="img/3-7.jpg" alt="1-hover">
+                    <h2>청매실 AHA BHA 토너</h2>
+                    <p>₩18,000</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section><!-- section09 end -->
+
+    <section class="section-10">
+        <img id="image-to-change" src="img/image 9.png" alt="">
+    </section><!-- section-10 end -->
+
+
+
+
+
+    <footer>
+
+        <div class="image">
+            <img src="img/로고이미지.png" alt="">
+        </div>
+
+
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <ul>
+                    <li>070-4217412</li>
+                    <li>OPEN 10:00 am~ 17:00 pm 주말 및 공휴일 휴무</li>
+                    <li>support_kr@beautyofjoseon.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>고객서비스</h3>
+                <ul>
+                    <li>고객 지원</li>
+                    <li>공지 사항</li>
+                    <li>회원 혜택</li>
+                    <li>FAQ</li>
+                    <li>상품후기</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>소셜미디어</h3>
+                <ul>
+                    <li>INSTAGRAM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>법적고지</h3>
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보 취급방침</li>
+                    <li>사업자정보확인</li>
+                    <li>임직원 전용</li>
+                </ul>
+            </div>
+        </div>
+
+
+        </div>
+
+
+        <div class="footer-info">
+            <p>© COPYRIGHT 2025 RALPH LAUREN. ALL RIGHTS RESERVED.</p>
+        </div>
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
